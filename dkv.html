@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Komunikasi Visual - SMK IT AL HIDAYAH</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Dokumentasi gaya lokal khusus halaman jurusan DKV */
+        .jurusan-section {
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        /* Banner Detail Jurusan DKV (Menggunakan gradien bernuansa kreatif/artistic) */
+        .jurusan-hero {
+            background: linear-gradient(135deg, #4338ca, #a855f7);
+            color: #ffffff;
+            padding: 60px 40px;
+            border-radius: var(--radius-md);
+            text-align: left;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .jurusan-hero h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .jurusan-hero p {
+            color: #f3e8ff;
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+
+        /* Layout Grid Konten */
+        .jurusan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .section-box {
+            background-color: #ffffff;
+            padding: 40px 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section-box h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border-left: 4px solid #a855f7; /* Aksen ungu kreatif untuk DKV */
+            padding-left: 12px;
+            text-align: left;
+        }
+
+        /* List Kompetensi / Materi Terstruktur */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .skill-item {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        .skill-item::before {
+            content: "✦";
+            color: #a855f7;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        /* Prospek Kerja Cards */
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .career-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 28px;
+            border-radius: var(--radius-md);
+            text-align: left;
+            border-top: 4px solid var(--accent);
+            transition: var(--transition-smooth);
+        }
+        .career-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .career-card h4 {
+            color: var(--secondary);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .career-card p {
+            color: var(--text-main);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 992px) {
+            .jurusan-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+            .sidebar-box {
+                position: sticky;
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                 <img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;">
+                <div class="logo-text">
+                    <span class="school-name">SMK IT AL HIDAYAH</span>
+                    <span class="school-tag">Terakreditasi <b>A</b></span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Profil <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="visi-misi.html">Visi & Misi</a>
+                        <a href="manajemen.html">Manajemen Sekolah</a>
+                        <a href="fasilitas.html">Fasilitas</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn active-dropdown">
+                        Jurusan <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="rpl.html">Pengembangan Perangkat Lunak & Gim</a>
+                        <a href="dkv.html">Desain Komunikasi Visual</a>
+                    </div>
+                </div>
+                <a href="bkk.html" class="nav-link">BKK & Industri</a>
+                <a href="kesiswaan.html" class="nav-link">Kesiswaan</a>
+                <a href="kontak.html" class="nav-link">Kontak</a>
+            </nav>
+
+            <div class="action-section">
+                <a href="spmb.html" class="btn-ppdb">SPMB</a>
+                <button id="hamburger-btn" class="hamburger-btn" aria-label="Buka Menu">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-overlay" class="mobile-overlay">
+            <div id="mobile-menu-container" class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <h3>Menu Navigasi</h3>
+                    <button id="close-btn" class="close-btn">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-link">Beranda</a>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-profil')" class="accordion-btn">
+                            Profil Sekolah <span>▼</span>
+                        </button>
+                        <div id="mob-profil" class="accordion-content">
+                            <a href="visi-misi.html">Visi & Misi</a>
+                            <a href="manajemen.html">Manajemen</a>
+                            <a href="fasilitas.html">Fasilitas</a>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-jurusan')" class="accordion-btn active">
+                            Kompetensi Keahlian <span>▼</span>
+                        </button>
+                        <div id="mob-jurusan" class="accordion-content show">
+                            <a href="rpl.html">Pengembangan Perangkat Lunak & Gim</a>
+                            <a href="dkv.html" style="color: var(--primary); font-weight: 600;">Desain Komunikasi Visual</a>
+                        </div>
+                    </div>
+                    <a href="bkk.html" class="mobile-link">BKK & Industri</a>
+                    <a href="kesiswaan.html" class="mobile-link">Kesiswaan</a>
+                    <a href="kontak.html" class="mobile-link">Kontak</a>
+                </nav>
+                <div class="mobile-menu-footer">&copy; AK 2026 SMK IT AL HIDAYAH.</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="jurusan-section">
+            
+            <div class="jurusan-hero">
+                <h2>Desain Komunikasi Visual (DKV)</h2>
+                <p>Kompetensi keahlian yang memadukan seni visual, kreativitas, dan teknologi untuk menyampaikan gagasan atau informasi secara efektif melalui media cetak, digital, maupun audiovisual.</p>
+            </div>
+
+            <div class="jurusan-grid">
+                
+                <div class="main-info-col">
+                    
+                    <div class="section-box" style="margin-bottom: 32px;">
+                        <h3>Tentang Kompetensi Keahlian</h3>
+                        <p style="text-align: left; color: var(--text-main); margin-bottom: 16px;">
+                            Desain Komunikasi Visual (DKV) mendidik siswa untuk menguasai konsep komunikasi grafis berbasis digital dan manual. Di jurusan ini, kreativitas dikembangkan menjadi aset bernilai tinggi dengan mempelajari bagaimana sebuah elemen visual seperti ilustrasi, warna, tipografi, dan tata letak dapat dikombinasikan menjadi media promosi dan informasi yang fungsional.
+                        </p>
+                        <p style="text-align: left; color: var(--text-main);">
+                            Seiring pesatnya pertumbuhan industri kreatif dan digital startup, lulusan DKV dipersiapkan secara matang untuk memenuhi kebutuhan pasar agensi periklanan, rumah produksi film/televisi, studio animasi, hingga manajemen media sosial korporat.
+                        </p>
+                    </div>
+
+                    <div class="section-box" style="margin-bottom: 32px;">
+                        <h3>Kompetensi Inti yang Dipelajari</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Desain Grafis & Ilustrasi (Vector & Raster)</div>
+                            <div class="skill-item">Fotografi Studio & Komersial</div>
+                            <div class="skill-item">Videografi & Editing Film (Audiovisual)</div>
+                            <div class="skill-item">2D & 3D Animation Dasar</div>
+                            <div class="skill-item">Branding & Periklanan (Creative Marketing)</div>
+                            <div class="skill-item">Pengemasan Produk (Packaging Design)</div>
+                        </div>
+                    </div>
+
+                    <div class="section-box">
+                        <h3>Prospek Kelulusan / Karier</h3>
+                        <div class="career-grid">
+                            <div class="career-card">
+                                <h4>Graphic & UI Designer</h4>
+                                <p>Merancang identitas visual, logo instansi, poster promosi, tata letak majalah, hingga komponen visual untuk aplikasi antarmuka digital.</p>
+                            </div>
+                            <div class="career-card">
+                                <h4>Content Creator & Videographer</h4>
+                                <p>Mengonsep, merekam, mendesain, dan menyunting video kreatif untuk platform pemasaran digital atau kebutuhan media sosial komersial.</p>
+                            </div>
+                            <div class="career-card">
+                                <h4>Professional Photographer</h4>
+                                <p>Bekerja secara mandiri maupun tim untuk pemotretan produk komersial, jurnalisme foto, dokumentasi event, hingga fashion photography.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sidebar-col">
+                    <div class="section-box sidebar-box">
+                        <h3>Informasi Jurusan</h3>
+                        <ul style="text-align: left; display: flex; flex-direction: column; gap: 16px; font-size: 0.95rem;">
+                            <li><strong>Ketua Kompetensi:</strong><br><span style="color: var(--text-muted);">Dasril, S.Pd.,Gr.</span></li>
+                            <li><strong>Akreditasi Sekolah:</strong><br><span style="color: var(--text-muted);">A (Unggul)</span></li>
+                            <li><strong>Sertifikasi Akreditasi:</strong><br><span style="color: var(--text-muted);">BAN-PDM</span></li>
+                            <li><strong>Mitra Industri Utama:</strong><br><span style="color: var(--text-muted);">Mulia Printing</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-circle-white"><img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;"></div>
+                    <span class="footer-school-name">SMK IT AL HIDAYAH</span>
+                </div>
+                <p class="footer-tagline">"Unggul, Berkarakter, dan Siap Kerja Menghadapi Era Globalisasi."</p>
+                <p class="footer-address"><strong>Alamat:</strong> Durian Hutan, Nagari Aia Gadang - Jl.Simpang Empat - Ujung Gading KM II, Kecamatan Pasaman Kabupaten Pasaman Barat Provinsi Sumatera Barat</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Jam Kerja Kantor</h3>
+                <ul class="work-hours">
+                    <li><span>Senin - Kamis</span> <strong>07.00 - 15.30 WIB</strong></li>
+                    <li><span>Jumat</span> <strong>07.00 - 14.00 WIB</strong></li>
+                    <li class="closed"><span>Sabtu - Minggu</span> <strong>TUTUP</strong></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul class="quick-links">
+                    <li><a href="kontak.html">Hubungi Admin (WhatsApp)</a></li>
+                    <li><a href="kebijakan-privasi.html">Kebijakan Privasi Website</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kontak & Sosmed</h3>
+                <p class="contact-info">Telp: +62 813 7437 9317</p>
+                <p class="contact-info">Email: smkit.alhidayah99@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/smk_it_alhidayah?igsh=bGRteWhrNG1raTM=" class="icon icon-instagram" title="Instagram">IG</a>
+                    <a href="https://youtube.com/@smkitalhidayahchannel?si=zrxQ-snzoZX2y5XV" class="icon icon-youtube" title="YouTube">YT</a>
+                    <a href="https://www.facebook.com/share/g/1BqvajJhxG/?mibextid=wwXIfr" class="icon icon-facebook" title="Facebook">FB</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; AK 2026 SMK IT AL HIDAYAH. Semua Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileMenuContainer = document.getElementById('mobile-menu-container');
+
+        function openMenu() {
+            mobileOverlay.classList.add('show');
+            mobileMenuContainer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileOverlay.classList.remove('show');
+            mobileMenuContainer.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', (e) => { if (e.target === mobileOverlay) closeMenu(); });
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('show');
+            const btn = content.previousElementSibling;
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

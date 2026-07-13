@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - SMK IT AL HIDAYAH</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Dokumentasi gaya lokal khusus halaman Kontak */
+        .kontak-section {
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Layout Grid Utama: Form di kiri, Info Kontak di kanan */
+        .kontak-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 56px;
+        }
+
+        .contact-box {
+            background-color: #ffffff;
+            padding: 40px 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+        }
+
+        .contact-box h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-light);
+            padding-left: 12px;
+        }
+
+        /* Formulir Bergaya Modern */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-main);
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background-color: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Detail Informasi List */
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            background-color: var(--bg-light);
+            color: var(--primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-text h4 {
+            color: var(--secondary);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Peta Google Maps */
+        .map-container {
+            width: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+            margin-top: 40px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            display: block;
+        }
+
+        @media (min-width: 992px) {
+            .kontak-grid {
+                grid-template-columns: 3fr 2fr; /* Kolom form lebih lebar dibanding info kontak */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                 <img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;">
+                <div class="logo-text">
+                    <span class="school-name">SMK IT AL HIDAYAH</span>
+                    <span class="school-tag">Terakreditasi <b>A</b></span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Profil <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="visi-misi.html">Visi & Misi</a>
+                        <a href="manajemen.html">Manajemen Sekolah</a>
+                        <a href="fasilitas.html">Fasilitas</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Jurusan <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="rpl.html">Pengembangan Perangkat Lunak</a>
+                        <a href="dkv.html">Desain Komunikasi Visual</a>
+                    </div>
+                </div>
+                <a href="bkk.html" class="nav-link">BKK & Industri</a>
+                <a href="kesiswaan.html" class="nav-link">Kesiswaan</a>
+                <a href="kontak.html" class="nav-link active">Kontak</a>
+            </nav>
+
+            <div class="action-section">
+                <a href="spmb.html" class="btn-ppdb">SPMB</a>
+                <button id="hamburger-btn" class="hamburger-btn" aria-label="Buka Menu">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-overlay" class="mobile-overlay">
+            <div id="mobile-menu-container" class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <h3>Menu Navigasi</h3>
+                    <button id="close-btn" class="close-btn">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-link">Beranda</a>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-profil')" class="accordion-btn">
+                            Profil Sekolah <span>▼</span>
+                        </button>
+                        <div id="mob-profil" class="accordion-content">
+                            <a href="visi-misi.html">Visi & Misi</a>
+                            <a href="manajemen.html">Manajemen</a>
+                            <a href="fasilitas.html">Fasilitas</a>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-jurusan')" class="accordion-btn">
+                            Kompetensi Keahlian <span>▼</span>
+                        </button>
+                        <div id="mob-jurusan" class="accordion-content">
+                            <a href="rpl.html">Pengembangan Perangkat Lunak</a>
+                            <a href="dkv.html">Desain Komunikasi Visual</a>
+                        </div>
+                    </div>
+                    <a href="bkk.html" class="mobile-link">BKK & Industri</a>
+                    <a href="kesiswaan.html" class="mobile-link">Kesiswaan</a>
+                    <a href="kontak.html" class="mobile-link" style="color: var(--primary); font-weight: 600;">Kontak</a>
+                </nav>
+                <div class="mobile-menu-footer">&copy; AK 2026 SMK IT AL HIDAYAH. Semua Hak Cipta Dilindungi Undang-Undang.</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="kontak-section text-center">
+            
+            <div class="page-header">
+                <span class="sub-title">Hubungi Kami</span>
+                <h1 class="main-title">Pusat Informasi & Layanan</h1>
+                <div class="title-line"></div>
+            </div>
+
+
+                <div class="contact-box" style="background-color: var(--bg-light);">
+                    <h3>Informasi Kantor</h3>
+                    <ul class="info-list">
+                        
+                        <li class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Alamat Sekolah</h4>
+                                <p>Durian Hutan, Nagari Aia Gadang - Jl.Simpang Empat - Ujung Gading KM II, Kecamatan Pasaman Kabupaten Pasaman Barat Provinsi Sumatera Barat</p>
+                            </div>
+                        </li>
+
+                        <li class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-text">
+                                <h4>Nomor Telepon</h4>
+                                <p>(+62) 813 7437 9317<br>(Kepala Sekolah)</p>
+                                <p>(+62) 812 6626 2280<br>(Kepala Prodi)</p>
+                                <p>(+62) 831-8295-6975<br>(Humas/Informasi SPMB)</p>
+                            </div>
+                        </li>
+
+                        <li class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-text">
+                                <h4>Email Resmi</h4>
+                                <p>smkit.alhidayah99@gmail.com<br>data.4g26@gmail.com</p>
+                            </div>
+                        </li>
+
+                        <li class="info-item">
+                            <div class="info-icon">⏱️</div>
+                            <div class="info-text">
+                                <h4>Jam Pelayanan Humas</h4>
+                                <p>Senin - Kamis (07.00 - 15.30 WIB)<br>Jumat (07.00 - 14.00 WIB)</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-circle-white"><img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;"></div>
+                    <span class="footer-school-name">SMK IT AL HIDAYAH</span>
+                </div>
+                <p class="footer-tagline">"Unggul, Berkarakter, dan Siap Kerja Menghadapi Era Globalisasi."</p>
+                <p class="footer-address"><strong>Alamat:</strong> Durian Hutan, Nagari Aia Gadang - Jl.Simpang Empat - Ujung Gading KM II, Kecamatan Pasaman Kabupaten Pasaman Barat Provinsi Sumatera Barat
+
+            <div class="footer-col">
+                <h3>Jam Kerja Kantor</h3>
+                <ul class="work-hours">
+                    <li><span>Senin - Kamis</span> <strong>07.00 - 15.30 WIB</strong></li>
+                    <li><span>Jumat</span> <strong>07.00 - 14.00 WIB</strong></li>
+                    <li class="closed"><span>Sabtu - Minggu</span> <strong>TUTUP</strong></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul class="quick-links">
+                    <li><a href="https://wa.me/6281374379317" target="_blank">Hubungi Admin (WhatsApp)</a></li>
+                    <li><a href="kebijakan-privasi.html">Kebijakan Privasi Website</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kontak & Sosmed</h3>
+                <p class="contact-info">Telp: +62 813 7437 9317</p>
+                <p class="contact-info">Email: smkit.alhidayah99@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/smk_it_alhidayah?igsh=bGRteWhrNG1raTM=" class="icon icon-instagram" title="Instagram">IG</a>
+                    <a href="https://youtube.com/@smkitalhidayahchannel?si=zrxQ-snzoZX2y5XV" class="icon icon-youtube" title="YouTube">YT</a>
+                    <a href="https://www.facebook.com/share/g/1BqvajJhxG/?mibextid=wwXIfr" class="icon icon-facebook" title="Facebook">FB</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; AK 2026 SMK IT AL HIDAYAH. Semua Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileMenuContainer = document.getElementById('mobile-menu-container');
+
+        function openMenu() {
+            mobileOverlay.classList.add('show');
+            mobileMenuContainer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileOverlay.classList.remove('show');
+            mobileMenuContainer.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', (e) => { if (e.target === mobileOverlay) closeMenu(); });
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('show');
+            const btn = content.previousElementSibling;
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

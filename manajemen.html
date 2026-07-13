@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Sekolah - SMK IT AL HIDAYAH</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;">
+                <div class="logo-text">
+                    <span class="school-name">SMK IT AL HIDAYAH</span>
+                    <span class="school-tag">Terakreditasi <b>A</b></span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn active-dropdown">
+                        Profil <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="visi-misi.html">Visi & Misi</a>
+                        <a href="manajemen.html">Manajemen Sekolah</a>
+                        <a href="fasilitas.html">Fasilitas</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Jurusan <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="rpl.html">Pengembangan Perangkat Lunak & Gim</a>
+                        <a href="dkv.html">Desain Komunikasi Visual</a>
+                    </div>
+                </div>
+                <a href="bkk.html" class="nav-link">BKK & Industri</a>
+                <a href="kesiswaan.html" class="nav-link">Kesiswaan</a>
+                <a href="kontak.html" class="nav-link">Kontak</a>
+            </nav>
+
+            <div class="action-section">
+                <a href="spmb.html" class="btn-ppdb">SPMB</a>
+                <button id="hamburger-btn" class="hamburger-btn" aria-label="Buka Menu">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-overlay" class="mobile-overlay">
+            <div id="mobile-menu-container" class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <h3>Menu Navigasi</h3>
+                    <button id="close-btn" class="close-btn">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-link">Beranda</a>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-profil')" class="accordion-btn active">
+                            Profil Sekolah <span>▼</span>
+                        </button>
+                        <div id="mob-profil" class="accordion-content show">
+                            <a href="visi-misi.html">Visi & Misi</a>
+                            <a href="manajemen.html" style="color: var(--color-blue); font-weight: 600;">Manajemen</a>
+                            <a href="fasilitas.html">Fasilitas</a>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button onclick="toggleAccordion('mob-jurusan')" class="accordion-btn">
+                            Kompetensi Keahlian <span>▼</span>
+                        </button>
+                        <div id="mob-jurusan" class="accordion-content">
+                            <a href="rpl.html">Rekayasa Perangkat Lunak/Pengembangan Perangkat Lunak & Gim</a>
+                            <a href="dkv.html">Desain Komunikasi Visual</a>
+                        </div>
+                    </div>
+                    <a href="bkk.html" class="mobile-link">BKK & Industri</a>
+                    <a href="kesiswaan.html" class="mobile-link">Kesiswaan</a>
+                    <a href="kontak.html" class="mobile-link">Kontak</a>
+                </nav>
+                <div class="mobile-menu-footer">&copy; AK 2026 SMK IT AL HIDAYAH.</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content text-center">
+        <section class="management-section">
+            
+            <div class="page-header">
+                <span class="sub-title">Struktur Organisasi</span>
+                <h1 class="main-title">Manajemen & Pimpinan</h1>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="leader-row principal-row">
+                <div class="profile-card big-card">
+                    <div class="profile-img-placeholder">
+                        <img src="assets/img/foto-kepsek.png" alt="assets/img/foto-kepsek.png">
+                    </div>
+                    <h3>Sardin, S.Pd.I.,Gr.</h3>
+                    <p class="role">Kepala Sekolah</p>
+                    <span class="nip"></span>
+                </div>
+            </div>
+
+            <div class="management-grid">
+                
+                <div class="profile-card">
+                    <div class="profile-img-placeholder">
+                        <span>Foto 3x4</span>
+                    </div>
+                    <h3>Siti Murni, S.Si.,Gr.</h3>
+                    <p class="role blue-role">Waka Kurikulum</p>
+                    <span class="nip"></span>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-img-placeholder">
+                        <span>Foto 3x4</span>
+                    </div>
+                    <h3>-</h3>
+                    <p class="role blue-role">Waka Kesiswaan</p>
+                    <span class="nip"></span>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-img-placeholder">
+                        <span>Foto 3x4</span>
+                    </div>
+                    <h3>-</h3>
+                    <p class="role blue-role">Waka Hubungan Industri</p>
+                    <span class="nip"></span>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-img-placeholder">
+                        <span>Foto 3x4</span>
+                    </div>
+                    <h3>-</h3>
+                    <p class="role blue-role">Waka Sarana Prasarana</p>
+                    <span class="nip"></span>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-circle-white"><img src="assets/img/logo-smk.png" alt="Logo SMK IT AL HIDAYAH" style="height: 50px; width: auto; object-fit: contain;"></div>
+                    <span class="footer-school-name">SMK IT AL HIDAYAH</span>
+                </div>
+                <p class="footer-tagline">"Unggul, Berkarakter, dan Siap Kerja Menghadapi Era Globalisasi."</p>
+                <p class="footer-address"><strong>Alamat:</strong> Durian Hutan, Nagari Aia Gadang - Jl.Simpang Empat - Ujung Gading KM II, Kecamatan Pasaman Kabupaten Pasaman Barat Provinsi Sumatera Barat</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Jam Kerja Kantor</h3>
+                <ul class="work-hours">
+                    <li><span>Senin - Kamis</span> <strong>07.00 - 15.30 WIB</strong></li>
+                    <li><span>Jumat</span> <strong>07.00 - 14.00 WIB</strong></li>
+                    <li class="closed"><span>Sabtu - Minggu</span> <strong>TUTUP</strong></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul class="quick-links">
+                    <li><a href="kontak.html">Hubungi Admin (WhatsApp)</a></li>
+                    <li><a href="kebijakan-privasi.html">Kebijakan Privasi Website</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kontak & Sosmed</h3>
+                <p class="contact-info">Telp: +62 813 7437 9317</p>
+                <p class="contact-info">Email: smkit.alhidayah99@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/smk_it_alhidayah?igsh=bGRteWhrNG1raTM=" class="icon icon-instagram" title="Instagram">IG</a>
+                    <a href="https://youtube.com/@smkitalhidayahchannel?si=zrxQ-snzoZX2y5XV" class="icon icon-youtube" title="YouTube">YT</a>
+                    <a href="https://www.facebook.com/share/g/1BqvajJhxG/?mibextid=wwXIfr" class="icon icon-facebook" title="Facebook">FB</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; AK 2026 SMK IT AL HIDAYAH. Semua Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileMenuContainer = document.getElementById('mobile-menu-container');
+
+        function openMenu() {
+            mobileOverlay.classList.add('show');
+            mobileMenuContainer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileOverlay.classList.remove('show');
+            mobileMenuContainer.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', (e) => { if (e.target === mobileOverlay) closeMenu(); });
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('show');
+            const btn = content.previousElementSibling;
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
